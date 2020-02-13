@@ -8,43 +8,52 @@
     <title>Ternary Traveler</title>
 </head>
 <body>
-    <form>
+    <div>
         <fieldset>
-            <label for="placeId">Place</label>
+            <legend>Add a Point of Interest</legend>
+            <label for="placeId">Select a Place</label>
             <!-- TODO: MAKE DROP-DOWN LIST OF PLACES -->
-            <input type="" name="placeId" id="placeId">
-        </fieldset>
-
-        <fieldset>
+            <select id="placeId" name="placeId">
+                <option value="italy">Italy</option>
+                <option value="switzerland">Switzerland</option>
+                <option value="france">France</option>
+            </select>
+        
             <label for="interestName">Name</label>
             <input type="text" name="interestName" id="interestName">
-        </fieldset>
-
-        <fieldset>
+        
             <label for="interestDescription">Description</label>
             <input type="text" name="interestDescription" id="interestDescription">
-        </fieldset>
-
-        <fieldset>
+        
             <label for="interestCost">Cost</label>
             <input type="text" name="interestCost" id="interestCost">
         </fieldset>
 
-        <fieldset>
+        <!-- <fieldset>
             <label for="interestReview">Review</label>
-            <!-- TODO: MAKE ADD-REVIEW ONLY PART OF EDIT FUNCTION -->
+             TODO: MAKE ADD-REVIEW ONLY PART OF EDIT FUNCTION 
             <input type="text" name="interestReview" id="interestReview">
-        </fieldset>
-    </form>
+        </fieldset> -->
+        <button id="submitButton">Submit</button>
+    </div>
     <section class="output">
         <article id="italy">
-
+            <h2>Italy</h2>
+            <div id="italyPoints">
+            
+            </div>
         </article>
         <article id="switzerland">
+            <h2>Switzerland</h2>
+            <div id="switzerlandPoints">
 
+            </div>
         </article>
         <article id="france">
-            
+            <h2>France</h2>
+            <div id="francePoints">
+
+            </div>
         </article>
     </section>
     <script type="module" src="scripts/main.js"></script>
