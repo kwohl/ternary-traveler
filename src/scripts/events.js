@@ -7,7 +7,7 @@ const descriptionInput = document.querySelector("#interestDescription")
 const costInput = document.querySelector("#interestCost")
 const placeInput = document.querySelector("#placeId")
 
-
+const outputField = document.querySelector(".output")
 
 const events = {
     addSubmitEventListener() {
@@ -15,7 +15,7 @@ const events = {
          let placeId = 0
             if (placeInput.value === "italy") {
              placeId = 1
-         }   else if (placeInput.value === "swizerland") {
+         }   else if (placeInput.value === "switzerland") {
              placeId = 2
          } else if (placeInput.value === "france") {
              placeId = 3
@@ -30,6 +30,17 @@ const events = {
         
             api.savePointOfInterest(newPointOfInterest)
                 .then(api.getPointsOfInterest).then(renderInterestPoints)
+        })
+    },
+    addOutputEventListeners() {
+        outputField.addEventListener("click", event => {
+            if(event.target.id.startsWith("deleteButton--")) {
+                const interestToDelete = event.target.id.split("--")[1]
+
+                api.deletePointOfInterest(interestToDelete)
+                    .then(api.getPointsOfInterest)
+                    .then(renderInterestPoints)
+            }
         })
     }
 }

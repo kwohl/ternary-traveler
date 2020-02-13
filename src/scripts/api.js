@@ -17,6 +17,12 @@ const api = {
             },
             body: JSON.stringify(newInterest)
         })
+    },
+    deletePointOfInterest(interestId) {
+        return fetch(`${baseURL}/interests/${interestId}`, {
+            method: "DELETE"
+        })
+        .then(response => response.json())
     }
 }
 

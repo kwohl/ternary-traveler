@@ -19,52 +19,24 @@
   "interests": [
     {
       "placeId": 1,
-      "name": "tra",
-      "description": "asdf",
-      "cost": "3",
+      "name": "Positano",
+      "description": "Small town on the Amalfi Coast with beautiful multi-colored buildings.",
+      "cost": "0",
       "id": 1
     },
     {
-      "placeId": 1,
-      "name": "test",
-      "description": "test",
-      "cost": "4",
-      "id": 2
-    },
-    {
-      "placeId": 1,
-      "name": "gfh",
-      "description": "ngcnb",
-      "cost": "3",
+      "placeId": 3,
+      "name": "Eiffle Tower",
+      "description": "big tower",
+      "cost": "30",
       "id": 3
     },
     {
-      "placeId": 1,
-      "name": "sadgf",
-      "description": "asdf",
-      "cost": "2",
+      "placeId": 2,
+      "name": "Alps",
+      "description": "great place to go skiing",
+      "cost": "300",
       "id": 4
-    },
-    {
-      "placeId": 1,
-      "name": "asdf",
-      "description": "asdf",
-      "cost": "4",
-      "id": 5
-    },
-    {
-      "placeId": 1,
-      "name": "test",
-      "description": "test",
-      "cost": "5",
-      "id": 6
-    },
-    {
-      "placeId": 3,
-      "name": "asdg",
-      "description": "sadg",
-      "cost": "5",
-      "id": 7
     }
   ]
 }
