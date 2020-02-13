@@ -36,10 +36,13 @@ const events = {
         outputField.addEventListener("click", event => {
             if(event.target.id.startsWith("deleteButton--")) {
                 const interestToDelete = event.target.id.split("--")[1]
-
-                api.deletePointOfInterest(interestToDelete)
+                if (confirm("Would you really like to delete this point of interest?")) {
+                    window.alert("You have deleted this point of interest.")
+                    api.deletePointOfInterest(interestToDelete)
                     .then(api.getPointsOfInterest)
                     .then(renderInterestPoints)
+                }
+                
             }
         })
     }

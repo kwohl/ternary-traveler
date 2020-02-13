@@ -18,13 +18,6 @@
   ],
   "interests": [
     {
-      "placeId": 1,
-      "name": "Positano",
-      "description": "Small town on the Amalfi Coast with beautiful multi-colored buildings.",
-      "cost": "0",
-      "id": 1
-    },
-    {
       "placeId": 3,
       "name": "Eiffle Tower",
       "description": "big tower",
@@ -37,6 +30,13 @@
       "description": "great place to go skiing",
       "cost": "300",
       "id": 4
+    },
+    {
+      "placeId": 1,
+      "name": "Positano",
+      "description": "A small town on the Amalfi Coast with beautiful, multi-colored buildings",
+      "cost": "0",
+      "id": 5
     }
   ]
 }
