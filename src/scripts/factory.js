@@ -7,6 +7,7 @@ const makeInterestComponent = (pointOfInterest) => {
     <h4>${pointOfInterest.name}</h4>
     <p>${pointOfInterest.description}</p>
     <p>Cost: $${pointOfInterest.cost}</p>
+    <button id="deleteButton--${pointOfInterest.id}">Delete</button>
     `
 }
 
