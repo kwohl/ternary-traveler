@@ -11,8 +11,9 @@
     <div>
         <fieldset>
             <legend>Add a Point of Interest</legend>
+            <input type="hidden" id="hiddenInput" value="" />
+
             <label for="placeId">Select a Place</label>
-            <!-- TODO: MAKE DROP-DOWN LIST OF PLACES -->
             <select id="placeId" name="placeId">
                 <option value="italy">Italy</option>
                 <option value="switzerland">Switzerland</option>
@@ -25,16 +26,16 @@
             <label for="interestDescription">Description</label>
             <input type="text" name="interestDescription" id="interestDescription">
         
-            <label for="interestCost">Cost</label>
-            <input type="text" name="interestCost" id="interestCost">
+            <label class="toEdit hidden" for="interestCost">Cost</label>
+            <input class="toEdit hidden" type="text" name="interestCost" id="interestCost">
+
+            <label class="toEdit hidden" for="interestReview">Review</label>
+            <input class="toEdit hidden" type="text" name="interestReview" id="interestReview">
+            
         </fieldset>
 
-        <!-- <fieldset>
-            <label for="interestReview">Review</label>
-             TODO: MAKE ADD-REVIEW ONLY PART OF EDIT FUNCTION 
-            <input type="text" name="interestReview" id="interestReview">
-        </fieldset> -->
         <button id="submitButton">Submit</button>
+        <button id="saveButton" class="toEdit hidden">Save</button>
     </div>
     <section class="output">
         <article id="italy">
