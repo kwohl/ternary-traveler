@@ -6,6 +6,7 @@ const nameInput = document.querySelector("#interestName")
 const descriptionInput = document.querySelector("#interestDescription")
 const costInput = document.querySelector("#interestCost")
 const placeInput = document.querySelector("#placeId")
+const reviewInput = document.querySelector("#interestReview")
 
 const outputField = document.querySelector(".output")
 
@@ -24,7 +25,8 @@ const events = {
             'placeId': placeId, 
             'name': nameInput.value, 
             'description': descriptionInput.value, 
-            'cost': costInput.value
+            'cost': costInput.value,
+            'review': reviewInput.value
         }
         
         
@@ -43,6 +45,22 @@ const events = {
                     .then(renderInterestPoints)
                 }
                 
+            }
+            if(event.target.id.startsWith("editButton--")) {
+                const interestToEdit = event.target.id.split("--")[1]
+                api.updateFormFields(interestToEdit)
+                const toEdit = document.querySelectorAll(".toEdit")
+                const editArray = Array.from(toEdit)
+                editArray.forEach(element => element.classList.toggle("hidden"))
+                //TODO: create save button, add event listener
+                const saveButton = document.querySelector("#saveButton")
+
+                saveButton.addEventListener("click", () => {
+                    api.editPointOfInterest(interestToEdit)
+                    .then(api.getPointsOfInterest)
+                    .then(renderInterestPoints)
+                    editArray.forEach(element => element.classList.toggle("hidden"))
+                })
             }
         })
     }

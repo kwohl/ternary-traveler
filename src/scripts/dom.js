@@ -13,12 +13,13 @@ const renderInterestPoints = (interests) => {
         const interestHtml = makeInterestComponent(interest);
         if (interest.placeId === 1) {
             italyContainer.innerHTML += interestHtml;
+            
         } else if (interest.placeId === 2) {
-            
             switzerlandContainer.innerHTML += interestHtml;
-        } else if (interest.placeId === 3) {
             
+        } else if (interest.placeId === 3) {
             franceContainer.innerHTML += interestHtml;
+     
         }
     })
 }
